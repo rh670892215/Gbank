@@ -52,7 +52,7 @@ func (n *Node) Search(parts []string, height int) *Node {
 // 匹配当前节点的子节点中是否有指定part的节点
 func (n *Node) matchChild(part string) *Node {
 	for _, child := range n.children {
-		if child.pattern == part || child.isWild {
+		if child.part == part || child.isWild {
 			return child
 		}
 	}
